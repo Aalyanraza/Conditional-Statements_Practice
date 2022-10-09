@@ -3,6 +3,7 @@ using namespace std;
 
 int main(){
 	int day,mon;
+	
 	cout<<"Month number:(1 for January, 2 for February, and so on):\n";
 	cin>>mon;
 	cout<<"Day of the Month: \n";
