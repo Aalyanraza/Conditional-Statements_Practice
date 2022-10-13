@@ -39,8 +39,9 @@ int main(){
 			break;}
 		
 	
-	if (choice>8 || choice <1)
+	if (choice>8 || choice <1){
 		cout<<"Invalid Response\n";
+		return 0;}
 	else{	
 		cout<<"\nVIP: (Ticket Price: "<<VIP_price<<')';
 		cout<<"\n1. Imran Khan enclosure (Max 1000 seats)\n   Available seats: "<<rand()%1000;
@@ -58,14 +59,16 @@ int main(){
 		cout<<"\n\nChoose enclosure: ";
 		cin>>enc;
 		
-		if (enc<1 || enc>8)
+		if (enc<1 || enc>8){
 			cout<<"Invalid response\n";
+			return 0;}
 		else{
 			cout<<"Press F for family. Otherwise press S.\n";
 			cin>>fam;
 			
-			if ((fam=='f'||fam=='F'||fam=='S'||fam=='s')==0)
+			if ((fam=='f'||fam=='F'||fam=='S'||fam=='s')==0){
 				cout<<"Invalid Response\n";
+				return 0;}
 			else{ 
 				switch (fam){
 					case('f'):
@@ -74,11 +77,11 @@ int main(){
 						cin>>child;
 						cout<<"No. of adults:(Max 4) ";
 						cin>>adult;
-						if (adult>4 || adult<0 || child>5 || child <0)
-							cout <<"Invalid Responce";
+						if (adult>4 || adult<0 || child>5 || child <0){
+							cout <<"Invalid Responce\n";
+							return 0;}
 						else{
-							cout<<"Enter ID:(Format:-13***********)";
-							cout<<":-";
+							cout<<"Enter ID:(Format:-13***********):- ";
 							cin>>ID;
 							switch (enc){
 								case(1):
@@ -100,15 +103,16 @@ int main(){
 								case(8):
 									adult_bill=adult*G_price;
 									child_bill=child*G_price;
-									break;}
+									break;}	
 							cout<<"Total bill: "<<(child_bill*0.8)+(adult_bill*0.9)<<endl;break;}
 																																							
 					case ('s'):
 					case ('S'):
 						cout<<"No. of adult tickets:(Max. 8) ";
 						cin>>adult;
-						if (adult<0 ||adult>8)
+						if (adult<0 ||adult>8){
 							cout<<"Invalid response";
+							return 0;}
 						else{
 							switch (enc){
 								case(1):
@@ -131,5 +135,7 @@ int main(){
 							if (adult>4)
 								cout<<"Total bill: "<<adult_bill*0.9<<endl;
 							else
-								cout<<"Total bill: "<<adult_bill<<endl;break;}}}}	
+								cout<<"Total bill: "<<adult_bill<<endl;break;
+					default:
+						cout<<"Invalid Response\n";}}}}				
 return 0;}}
