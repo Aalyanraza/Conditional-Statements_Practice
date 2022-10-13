@@ -93,7 +93,7 @@ int main(){
                             cout<<"2. OS Event Log File\n3. Full Crash Dump\n";
                             cout<<"Call HP Service Provider\n";}
                         else if (ans=="n" || ans=="N" || ans=="No" || ans=="no")
-                            cout<<"Recording Symptom or Error Information on Repair tag if Sending Back a Repaired Part.";}}}}
+                            cout<<"Recording Symptom or Error Information on Repair tag if Sending Back a Repaired Part.\n";}}}}
 return 0;}
 
 
