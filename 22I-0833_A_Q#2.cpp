@@ -8,17 +8,17 @@ int main(){
 	cin>>mon;
 	cout<<"Day of the Month: \n";
 	cin>>day;
-	if (day<1 || day> 31 || mon<1 || mon >12){
+	if (day<1 || day> 31 || mon<1 || mon >12){ //Input Validation 
 		cout<<"Invalid Input\n";}
-	else if ( mon==2){
+	else if ( mon==2){// Feb can not have more than 29 days
 		if (day>29)
 			cout<<"Invalid Input\n";}
 			
-	else if ((mon==4||mon==6||mon==9||mon==11)&& (day>30))
+	else if ((mon==4||mon==6||mon==9||mon==11)&& (day>30))//these months have 30 days
 			cout<<"Invalid Input\n";
 	
 	
-	else{
+	else{// working
 		switch (mon){
 			case(1):
 			case(2):

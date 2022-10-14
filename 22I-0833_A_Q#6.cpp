@@ -16,7 +16,7 @@ int main(){
 	f=rand()%1000;
 	g=rand()%1000;
 	h=rand()%1000;
-	
+	//Menu 1
 	cout<<"1. 27 Feb 2020 – Islamabad United v Quetta Gladiators, Pindi Cricket Stadium\n(7pm-10.15pm)\n";
 	cout<<"2. 28 Feb 2020 – Peshawar Zalmi v Lahore Qalandars, Pindi Cricket Stadium\n(8pm-11.15pm)\n";
 	cout<<"3. 29 Feb 2020 – Islamabad United v Peshawar Zalmi, Pindi Cricket Stadium\n(7pm-10.15pm)\n";
@@ -29,7 +29,7 @@ int main(){
 	cout<<"Enter your choice(1-8): ";
 	cin>>choice;
 	
-	switch (choice){
+	switch (choice){// Price for each choice
 		case(1):
 		case(2):
 		case(3):
@@ -49,7 +49,7 @@ int main(){
 	if (choice>8 || choice <1){
 		cout<<"Invalid Response\n";
 		return 0;}
-	else{	
+	else{// Menu 2	
 		cout<<"\nVIP: (Ticket Price: "<<VIP_price<<')';
 		cout<<"\n1. Imran Khan enclosure (Max 1000 seats)\n   Available seats: "<<a;
 		cout<<"\n2. Javed Miandad enclosure (Max 1000 seats)\n   Available seats: "<<b;
@@ -69,7 +69,7 @@ int main(){
 		if (enc<1 || enc>8){
 			cout<<"Invalid response\n";
 			return 0;}
-		else{
+		else{// Family or Adults
 			cout<<"Press F for family. Otherwise press S.\n";
 			cin>>fam;
 			
@@ -79,7 +79,7 @@ int main(){
 			else{ 
 				switch (fam){
 					case('f'):
-					case('F'):
+					case('F')://Number of tickets
 						cout<<"No. of children:(Max. 5) ";
 						cin>>child;
 						cout<<"No. of adults:(Max 4) ";
@@ -133,7 +133,7 @@ int main(){
 						else{
 							cout<<"Enter ID:(Format:-13***********):- ";
 							cin>>ID;
-							switch (enc){
+							switch (enc){// Calculating Bill
 								case(1):
 								case(2):
 								case(3):
@@ -154,10 +154,11 @@ int main(){
 									adult_bill=adult*G_price;
 									child_bill=child*G_price;
 									break;}	
+							//Total Bill
 							cout<<"Total bill: Rs."<<(child_bill*0.8)+(adult_bill*0.9)<<endl;break;}
 																																							
 					case ('s'):
-					case ('S'):
+					case ('S')://Taking number of tickets
 						cout<<"No. of adult tickets:(Max. 8) ";
 						cin>>adult;
 						switch (enc){
@@ -222,7 +223,7 @@ int main(){
 								case(8):
 									adult_bill=adult*G_price;
 									break;}
-																		
+							//Total bill											
 							if (adult>4)
 								cout<<"Total bill: Rs."<<adult_bill*0.9<<endl;
 							else
