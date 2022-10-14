@@ -28,7 +28,7 @@ int main(){
 					case(20):
 					case(28):
 					case(33):
-						cout<<"Same Color\n";
+						cout<<"Same Color(Green)\n";
 						break;
 					default:
 						cout<<"Different Color\n";
@@ -52,7 +52,7 @@ int main(){
 					case(24):
 					case(29):
 					case(32):
-						cout<<"Same Color\n";
+						cout<<"Same Color(Red)\n";
 						break;
 					default:
 						cout<<"Different Color\n";
@@ -76,7 +76,7 @@ int main(){
 					case(30):
 					case(31):
 					case(36):
-						cout<<"Same Color\n";
+						cout<<"Same Color(Blue)\n";
 						break;
 					default:
 						cout<<"Different Color\n";
@@ -96,7 +96,7 @@ int main(){
 					case(22):
 					case(26):
 					case(35):
-						cout<<"Same Color\n";
+						cout<<"Same Color(Orange)\n";
 						break;
 					default:
 						cout<<"Different Color\n";
@@ -116,7 +116,7 @@ int main(){
 					case(21):
 					case(27):
 					case(34):			
-						cout<<"Same Color\n";
+						cout<<"Same Color(Grey)\n";
 						break;
 				default:
 						cout<<"Different Color\n";

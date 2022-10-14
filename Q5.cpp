@@ -9,6 +9,8 @@ int main(){
     cout<<"Rebooting server to see if condition still exists - DONE.\n";
     cout<<"Is this a newly installed server?: ";
     cin>>ans;
+    if ( (ans=="y" || ans=="Y" || ans=="Yes" || ans=="yes" || ans=="n" || ans=="N" || ans=="No" || ans=="no" ) ==0)
+        cout<<"Invalid Input\n";
     if (ans=="y" || ans=="Y" || ans=="Yes" || ans=="yes"){
         cout<<"Please reseat any components that may have come loose during shipping - DONE.\n";
         cout<<"Rebooting the server - DONE.\n";

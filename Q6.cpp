@@ -6,9 +6,16 @@ int main(){
 	int choice,VIP_price,P_price,F_price,G_price,enc,adult,child,child_bill,adult_bill ;
 	long int ID;
 	char fam,tkt;
-
+	int a,b,c,d,e,f,g,h,total;
 	srand(time(0));
-
+	a=rand()%1000;
+	b=rand()%1000;
+	c=rand()%1000;
+	d=rand()%1000;
+	e=rand()%1000;
+	f=rand()%1000;
+	g=rand()%1000;
+	h=rand()%1000;
 	
 	cout<<"1. 27 Feb 2020 – Islamabad United v Quetta Gladiators, Pindi Cricket Stadium\n(7pm-10.15pm)\n";
 	cout<<"2. 28 Feb 2020 – Peshawar Zalmi v Lahore Qalandars, Pindi Cricket Stadium\n(8pm-11.15pm)\n";
@@ -44,17 +51,17 @@ int main(){
 		return 0;}
 	else{	
 		cout<<"\nVIP: (Ticket Price: "<<VIP_price<<')';
-		cout<<"\n1. Imran Khan enclosure (Max 1000 seats)\n   Available seats: "<<rand()%1000;
-		cout<<"\n2. Javed Miandad enclosure (Max 1000 seats)\n   Available seats: "<<rand()%1000;
-		cout<<"\n3. Javed Akhter enclosure (Max 1000 seats)\n   Available seats: " <<rand()%1000;
-		cout<<"\n4. Azhar Mehmood enclosure (Max 1000 seats)\n   Available seats: "<<rand()%1000;
+		cout<<"\n1. Imran Khan enclosure (Max 1000 seats)\n   Available seats: "<<a;
+		cout<<"\n2. Javed Miandad enclosure (Max 1000 seats)\n   Available seats: "<<b;
+		cout<<"\n3. Javed Akhter enclosure (Max 1000 seats)\n   Available seats: " <<c;
+		cout<<"\n4. Azhar Mehmood enclosure (Max 1000 seats)\n   Available seats: "<<d;
 		cout<<"\n\nPremium: (Ticket Price: "<<P_price<<')';
-		cout<<"\n5. Shoaib Akhtar enclosure (Max 3000 seats)\n   Available seats: "<<rand()%3000;
+		cout<<"\n5. Shoaib Akhtar enclosure (Max 3000 seats)\n   Available seats: "<<e;
 		cout<<"\n\nFirst Class: (Ticket Price: "<<F_price<<')';
-		cout<<"\n6. Sohail Tanveer enclosure(Max 3000 seats)\n   Available seats: "<<rand()%3000;
+		cout<<"\n6. Sohail Tanveer enclosure(Max 3000 seats)\n   Available seats: "<<f;
 		cout<<"\n\nGeneral: (Ticket Price: "<<G_price<<')';
-		cout<<"\n7. Imran Buksh enclosure(Max 2500 seats)\n   Available seats: "<<rand()%2500;
-		cout<<"\n8. Yasir Arafat enclosure(Max 2500 seats)\n   Available seats: "<<rand()%2500<<endl;
+		cout<<"\n7. Imran Buksh enclosure(Max 2500 seats)\n   Available seats: "<<g;
+		cout<<"\n8. Yasir Arafat enclosure(Max 2500 seats)\n   Available seats: "<<h<<endl;
 		
 		cout<<"\n\nChoose enclosure: ";
 		cin>>enc;
@@ -77,8 +84,51 @@ int main(){
 						cin>>child;
 						cout<<"No. of adults:(Max 4) ";
 						cin>>adult;
+						total=child+adult;
+						switch (enc){
+							case 1:
+								if ((total)>a){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 2:
+								if ((total)>b){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 3:
+								if ((total)>c){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 4:
+								if ((total)>d){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 5:
+								if ((total)>e){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 6:
+								if ((total)>f){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 7:
+								if ((total)>g){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 8:
+								if ((total)>h){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;}
+								
 						if (adult>4 || adult<0 || child>5 || child <0){
-							cout <<"Invalid Responce\n";
+							cout <<"11Invalid Responce\n";
 							return 0;}
 						else{
 							cout<<"Enter ID:(Format:-13***********):- ";
@@ -104,14 +154,55 @@ int main(){
 									adult_bill=adult*G_price;
 									child_bill=child*G_price;
 									break;}	
-							cout<<"Total bill: "<<(child_bill*0.8)+(adult_bill*0.9)<<endl;break;}
+							cout<<"Total bill: Rs."<<(child_bill*0.8)+(adult_bill*0.9)<<endl;break;}
 																																							
 					case ('s'):
 					case ('S'):
 						cout<<"No. of adult tickets:(Max. 8) ";
 						cin>>adult;
+						switch (enc){
+							case 1:
+								if (adult>a){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 2:
+								if (adult>b){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 3:
+								if (adult>c){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 4:
+								if (adult>d){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 5:
+								if (adult>e){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 6:
+								if (adult>f){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 7:
+								if (adult>g){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;
+							case 8:
+								if (adult>h){
+									cout<<"Invalid Responce\n";
+									return 0;}
+								break;}						
 						if (adult<0 ||adult>8){
-							cout<<"Invalid response";
+							cout<<"Invalid response\n";
 							return 0;}
 						else{
 							switch (enc){
@@ -133,9 +224,9 @@ int main(){
 									break;}
 																		
 							if (adult>4)
-								cout<<"Total bill: "<<adult_bill*0.9<<endl;
+								cout<<"Total bill: Rs."<<adult_bill*0.9<<endl;
 							else
-								cout<<"Total bill: "<<adult_bill<<endl;break;
+								cout<<"Total bill: Rs."<<adult_bill<<endl;break;
 					default:
 						cout<<"Invalid Response\n";}}}}				
 return 0;}}
